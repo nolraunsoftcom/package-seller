@@ -214,6 +214,7 @@ export default function App() {
 
   useEffect(() => {
     setTimeout(() => {
+      notifee.setBadgeCount(0);
       SplashScreen.hide();
 
       setloading(false);
@@ -244,7 +245,6 @@ export default function App() {
     messaging()
       .getInitialNotification()
       .then(async remoteMessage => {
-        console.log('getInitialNotification', remoteMessage.data.badge);
         if (remoteMessage) {
           if (remoteMessage.data) {
             if (remoteMessage.data.badge) {
