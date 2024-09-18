@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>CFBundleDevelopmentRegion</key>
+	<string>en</string>
+	<key>CFBundleDisplayName</key>
+	<string>향산힐스</string>
+	<key>CFBundleExecutable</key>
+	<string>$(EXECUTABLE_NAME)</string>
+	<key>CFBundleIdentifier</key>
+	<string>$(PRODUCT_BUNDLE_IDENTIFIER)</string>
+	<key>CFBundleInfoDictionaryVersion</key>
+	<string>6.0</string>
+	<key>CFBundleName</key>
+	<string>$(PRODUCT_NAME)</string>
+	<key>CFBundlePackageType</key>
+	<string>APPL</string>
+	<key>CFBundleShortVersionString</key>
+	<string>$(MARKETING_VERSION)</string>
+	<key>CFBundleSignature</key>
+	<string>????</string>
+	<key>CFBundleVersion</key>
+	<string>$(CURRENT_PROJECT_VERSION)</string>
+	<key>ITSAppUsesNonExemptEncryption</key>
+	<false/>
+	<key>LSRequiresIPhoneOS</key>
+	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict>
+		<key>LSApplicationQueriesSchemes</key>
+		<array>
+			<string>lguthepay://</string>
+			<string>lguthepay-xpay://</string>
+			<string>smartxpay-transfer://</string>
+			<string>nhappcash-acp:// </string>
+			<string>SmartBank2WB://</string>
+			<string>hdcardappcardansimclick://</string>
+			<string>smhyundaiansimclick://</string>
+			<string>shinhan-sr-ansimclick://</string>
+			<string>smshinhanansimclick://</string>
+			<string>kb-acp://</string>
+			<string>mpocket.online.ansimclick://</string>
+			<string>ansimclickscard://</string>
+			<string>tswansimclick://</string>
+			<string>ansimclickipcollect://</string>
+			<string>vguardstart://</string>
+			<string>samsungpay</string>
+			<string>scardcertiapp://</string>
+			<string>lottesmartpay://</string>
+			<string>lpayapp://</string>
+			<string>lotteappcard://</string>
+			<string>payco://</string>
+			<string>cloudpay://</string>
+			<string>hanamopmoasign://</string>
+			<string>hanawalletmembers://</string>
+			<string>nhappcardansimclick://</string>
+			<string>nhallonepayansimclick://</string>
+			<string>nonghyupcardansimclick://</string>
+			<string>citispay://</string>
+			<string>citicardappkr://</string>
+			<string>ispmobile://</string>
+			<string>uppay://</string>
+			<string>shinsegaeeasypayment://</string>
+			<string>wooripay://</string>
+			<string>kftc-bankpay</string>
+			<string>itms-apps</string>
+			<string>citimobileapp</string>
+			<string>kakaotalk</string>
+		</array>
+		<key>NSAllowsArbitraryLoads</key>
+		<true/>
+		<key>NSExceptionDomains</key>
+		<dict>
+			<key>localhost</key>
+			<dict>
+				<key>NSExceptionAllowsInsecureHTTPLoads</key>
+				<true/>
+			</dict>
+		</dict>
+	</dict>
+	<key>NSCameraUsageDescription</key>
+	<string>게시물의 사진 및 동영상 촬영을 위해서 카메라 권한을 허용합니다.</string>
+	<key>NSLocationAlwaysAndWhenInUseUsageDescription</key>
+	<string>현재 위치가 매장근처 인지 확인하기 위하여 앱에서 위치정보 권한을 요청합니다.</string>
+	<key>NSLocationAlwaysUsageDescription</key>
+	<string>현재 위치가 매장근처 인지 확인하기 위하여 앱에서 위치정보 권한을 요청합니다.</string>
+	<key>NSLocationWhenInUseUsageDescription</key>
+	<string>현재 위치가 매장근처 인지 확인하기 위하여 앱에서 위치정보 권한을 요청합니다.</string>
+	<key>NSPhotoLibraryAddUsageDescription</key>
+	<string>게시물 사진을 업로드 하기 위해 사진권한을 허용합니다.</string>
+	<key>NSPhotoLibraryUsageDescription</key>
+	<string>게시물 사진을 업로드 하기 위해 사진권한을 허용합니다.</string>
+	<key>UIBackgroundModes</key>
+	<array>
+		<string>fetch</string>
+		<string>remote-notification</string>
+	</array>
+	<key>UILaunchStoryboardName</key>
+	<string>LaunchScreen</string>
+	<key>UIRequiredDeviceCapabilities</key>
+	<array>
+		<string>armv7</string>
+	</array>
+	<key>UISupportedInterfaceOrientations</key>
+	<array>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UISupportedInterfaceOrientations~ipad</key>
+	<array>
+		<string>UIInterfaceOrientationLandscapeLeft</string>
+		<string>UIInterfaceOrientationLandscapeRight</string>
+		<string>UIInterfaceOrientationPortrait</string>
+	</array>
+	<key>UIViewControllerBasedStatusBarAppearance</key>
+	<false/>
+</dict>
+</plist>

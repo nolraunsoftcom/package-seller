@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "3934364914",
+    "project_id": "tenpercent-84a0d",
+    "storage_bucket": "tenpercent-84a0d.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:3934364914:android:a8cc6a6fe2acfd6c619c6b",
+        "android_client_info": {
+          "package_name": "com.orora.tenpercent"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBzyf9mWwimqIY4zgP-lFhjMtdf5IqUq3I"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

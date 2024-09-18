@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
+<plist version="1.0">
+<dict>
+	<key>API_KEY</key>
+	<string>AIzaSyBC8nEYXMgLCewLB7Zu0pitvMKuqV_4bic</string>
+	<key>GCM_SENDER_ID</key>
+	<string>3934364914</string>
+	<key>PLIST_VERSION</key>
+	<string>1</string>
+	<key>BUNDLE_ID</key>
+	<string>com.orora.tenpercent</string>
+	<key>PROJECT_ID</key>
+	<string>tenpercent-84a0d</string>
+	<key>STORAGE_BUCKET</key>
+	<string>tenpercent-84a0d.appspot.com</string>
+	<key>IS_ADS_ENABLED</key>
+	<false></false>
+	<key>IS_ANALYTICS_ENABLED</key>
+	<false></false>
+	<key>IS_APPINVITE_ENABLED</key>
+	<true></true>
+	<key>IS_GCM_ENABLED</key>
+	<true></true>
+	<key>IS_SIGNIN_ENABLED</key>
+	<true></true>
+	<key>GOOGLE_APP_ID</key>
+	<string>1:3934364914:ios:f7a764caafdcbfdd619c6b</string>
+</dict>
+</plist>
