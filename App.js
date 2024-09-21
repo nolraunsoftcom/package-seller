@@ -223,7 +223,6 @@ export default function App() {
   /////////메시지받기
   const getmessage = async () => {
     messaging().onNotificationOpenedApp(async remoteMessage => {
-      console.log('onNotificationOpendApp', remoteMessage.data.badge);
       if (remoteMessage) {
         if (remoteMessage.data) {
           if (remoteMessage.data.badge) {
@@ -233,9 +232,12 @@ export default function App() {
           }
 
           if (remoteMessage.data.click_action) {
+            console.log('onNotificationOpenedApp');
             const newsourceUrl =
               'https://ten.members.markets' + remoteMessage.data.click_action;
-            setsourceUrl(newsourceUrl);
+            myWebWiew.current.injectJavaScript(`
+              window.location.href = "${newsourceUrl}";
+            `);
           }
         }
       }
@@ -248,25 +250,34 @@ export default function App() {
         if (remoteMessage) {
           if (remoteMessage.data) {
             if (remoteMessage.data.badge) {
-              notifee
-                .setBadgeCount(Number(remoteMessage.data.badge || 0))
-                .then(console.log);
+              notifee.setBadgeCount(Number(remoteMessage.data.badge || 0));
+
               PushNotification.setApplicationIconBadgeNumber(
                 parseInt(remoteMessage.data.badge),
               );
             }
 
             if (remoteMessage.data.click_action) {
+              console.log(
+                'getInitialNotification',
+                remoteMessage.data.click_action,
+              );
               const newsourceUrl =
                 'https://ten.members.markets' + remoteMessage.data.click_action;
+
               setsourceUrl(newsourceUrl);
+              myWebWiew.current.injectJavaScript(`
+                  window.location.href = "${newsourceUrl}";
+                `);
             }
           }
         }
       });
 
     const unsubscribe = messaging().onMessage(async remoteMessage => {
-      displayNotification(remoteMessage).then(res => {});
+      if (remoteMessage.notification?.body) {
+        displayNotification(remoteMessage).then(res => {});
+      }
 
       if (remoteMessage.data) {
         if (remoteMessage.data.badge) {
@@ -276,12 +287,6 @@ export default function App() {
           PushNotification.setApplicationIconBadgeNumber(
             parseInt(remoteMessage.data.badge),
           );
-        }
-
-        if (remoteMessage.data.click_action) {
-          const newsourceUrl =
-            'https://ten.members.markets' + remoteMessage.data.click_action;
-          setsourceUrl(newsourceUrl);
         }
       }
     });
@@ -330,11 +335,6 @@ export default function App() {
     }
   }, []);
 
-  //////
-  /////////////Modal
-  const [on, seton] = useState(false);
-  ////
-
   const injectJavaScript = `
     console.log = function(message) {
       window.ReactNativeWebView.postMessage('CONSOLE_LOG: ' + message);     
@@ -343,23 +343,41 @@ export default function App() {
 
   useEffect(() => {
     notifee.onBackgroundEvent(async event => {
-      console.log('onBackgroundEvent', event.detail.notification?.data.badge);
       if (event.detail.notification?.data.badge) {
         notifee
           .setBadgeCount(Number(event.detail.notification?.data.badge || 0))
           .then(console.log);
       }
+      if (event.detail.notification?.data.click_action) {
+        console.log('onBackgroundEvent');
+        const newsourceUrl =
+          'https://ten.members.markets' +
+          event.detail.notification?.data.click_action;
+        myWebWiew.current.injectJavaScript(`
+            window.location.href = "${newsourceUrl}";
+          `);
+      }
     });
 
     return notifee.onForegroundEvent(({type, detail}) => {
-      console.log('onForegroundEvent', detail.notification?.data.badge);
       if (detail.notification?.data.badge) {
         notifee
           .setBadgeCount(Number(detail.notification?.data.badge || 0))
           .then(console.log);
       }
+
       if (type === EventType.PRESS) {
         notifee.decrementBadgeCount();
+
+        if (detail.notification?.data.click_action) {
+          console.log('onForegroundEvent');
+          const newsourceUrl =
+            'https://ten.members.markets' +
+            detail.notification?.data.click_action;
+          myWebWiew.current.injectJavaScript(`
+              window.location.href = "${newsourceUrl}";
+            `);
+        }
       }
     });
   }, []);

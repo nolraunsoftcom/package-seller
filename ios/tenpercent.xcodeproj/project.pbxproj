@@ -13,6 +13,7 @@
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		5C1506642B4FE5F10065A9C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C1506632B4FE5F10065A9C2 /* GoogleService-Info.plist */; };
 		5C19EC292BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 5C19EC282BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy */; };
+		640A23F02C9EC53E00648329 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 640A23EF2C9EC53E00648329 /* splash.png */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		863CC18AF12FFFEDB82338F2 /* libPods-tenpercent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2EA5E03D459948886B756A /* libPods-tenpercent.a */; };
 		DF84875D65C5D38CA56E9BE5 /* libPods-tenpercent-tenpercentTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEDB456E3150F24FE007937 /* libPods-tenpercent-tenpercentTests.a */; };
@@ -44,6 +45,7 @@
 		5C1506622B4FE5D30065A9C2 /* tenpercent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = tenpercent.entitlements; path = tenpercent/tenpercent.entitlements; sourceTree = "<group>"; };
 		5C1506632B4FE5F10065A9C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "tenpercent/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		5C19EC282BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
+		640A23EF2C9EC53E00648329 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = ../assets/splash.png; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = tenpercent/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-tenpercent-tenpercentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tenpercent-tenpercentTests.release.xcconfig"; path = "Target Support Files/Pods-tenpercent-tenpercentTests/Pods-tenpercent-tenpercentTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -98,6 +100,7 @@
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
+				640A23EF2C9EC53E00648329 /* splash.png */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				5C19EC282BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy */,
 			);
@@ -255,6 +258,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				5C19EC292BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy in Resources */,
 				5C1506642B4FE5F10065A9C2 /* GoogleService-Info.plist in Resources */,
+				640A23F02C9EC53E00648329 /* splash.png in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -511,7 +515,7 @@
 				CLANG_ENABLE_MODULES = YES;
 				CODE_SIGN_ENTITLEMENTS = tenpercent/tenpercent.entitlements;
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C3N8GKX588;
 				ENABLE_BITCODE = NO;
@@ -522,7 +526,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
@@ -552,7 +556,7 @@
 				CODE_SIGN_ENTITLEMENTS = tenpercent/tenpercent.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C3N8GKX588;
 				INFOPLIST_FILE = tenpercent/Info.plist;
@@ -562,7 +566,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.1;
+				MARKETING_VERSION = 1.1.2;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
