@@ -120,8 +120,6 @@ export default function App() {
   };
 
   const onMessageReceived = async event => {
-    console.log('event.nativeEvent.data', event.nativeEvent.data);
-
     // 객체를 JSON 문자열로 변환하여 출력
     try {
       const parsedObject = JSON.parse(event.nativeEvent.data);
@@ -214,7 +212,7 @@ export default function App() {
 
   useEffect(() => {
     setTimeout(() => {
-      notifee.setBadgeCount(0);
+      // notifee.setBadgeCount(0);
       SplashScreen.hide();
 
       setloading(false);
@@ -226,6 +224,7 @@ export default function App() {
       if (remoteMessage) {
         if (remoteMessage.data) {
           if (remoteMessage.data.badge) {
+            console.log('onNotificationOpenedApp', remoteMessage.data.badge);
             notifee
               .setBadgeCount(Number(remoteMessage.data.badge || 0))
               .then(console.log);
@@ -250,11 +249,9 @@ export default function App() {
         if (remoteMessage) {
           if (remoteMessage.data) {
             if (remoteMessage.data.badge) {
-              notifee.setBadgeCount(Number(remoteMessage.data.badge || 0));
+              console.log('onNotificationOpenedApp', remoteMessage.data.badge);
 
-              PushNotification.setApplicationIconBadgeNumber(
-                parseInt(remoteMessage.data.badge),
-              );
+              notifee.setBadgeCount(Number(remoteMessage.data.badge || 0));
             }
 
             if (remoteMessage.data.click_action) {
@@ -281,6 +278,7 @@ export default function App() {
 
       if (remoteMessage.data) {
         if (remoteMessage.data.badge) {
+          console.log('onMessage', remoteMessage.data.badge);
           notifee
             .setBadgeCount(Number(remoteMessage.data.badge || 0))
             .then(console.log);
@@ -344,6 +342,7 @@ export default function App() {
   useEffect(() => {
     notifee.onBackgroundEvent(async event => {
       if (event.detail.notification?.data.badge) {
+        console.log(event.detail.notification?.data.badge);
         notifee
           .setBadgeCount(Number(event.detail.notification?.data.badge || 0))
           .then(console.log);
@@ -361,14 +360,13 @@ export default function App() {
 
     return notifee.onForegroundEvent(({type, detail}) => {
       if (detail.notification?.data.badge) {
+        console.log('onForegroundEvent', detail.notification?.data.badge);
         notifee
           .setBadgeCount(Number(detail.notification?.data.badge || 0))
           .then(console.log);
       }
 
       if (type === EventType.PRESS) {
-        notifee.decrementBadgeCount();
-
         if (detail.notification?.data.click_action) {
           console.log('onForegroundEvent');
           const newsourceUrl =
