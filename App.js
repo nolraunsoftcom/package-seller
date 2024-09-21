@@ -2,10 +2,8 @@ import messaging from '@react-native-firebase/messaging';
 import React, {useEffect, useRef, useState} from 'react';
 import {
   BackHandler,
-  Dimensions,
   Linking,
   Platform,
-  AppState,
   SafeAreaView,
   StatusBar,
   Alert,
@@ -13,37 +11,13 @@ import {
 import {PERMISSIONS, request, requestMultiple} from 'react-native-permissions';
 import SplashScreen from 'react-native-splash-screen';
 import {WebView} from 'react-native-webview';
-import PushNotification from 'react-native-push-notification';
 import VersionCheck from 'react-native-version-check';
 import Geolocation from '@react-native-community/geolocation';
 import {displayNotification} from './src/utils/displayNotification';
 import notifee, {EventType} from '@notifee/react-native';
 
-const w = Dimensions.get('window').width;
-
 export default function App() {
-  useEffect(() => {
-    const handleAppStateChange = nextAppState => {
-      console.log('앱 상태 변경:', nextAppState);
-      if (nextAppState === 'active') {
-        //PushNotification.setApplicationIconBadgeNumber(0);
-      }
-    };
-
-    // AppState 변경 이벤트에 대한 리스너 등록
-    const subscription = AppState.addEventListener(
-      'change',
-      handleAppStateChange,
-    );
-
-    // 컴포넌트가 unmount 될 때 리스너 정리
-    return () => {
-      subscription.remove();
-    };
-  }, []); // 빈 배열을 전달하여 컴포넌트가 처음 마운트될 때만 실행
-
   const myWebWiew = useRef();
-
   const [sourceUrl, setsourceUrl] = useState('https://ten.members.markets');
   const [pays, setpays] = useState([
     'supertoss://',
@@ -84,7 +58,6 @@ export default function App() {
   ]);
 
   const onShouldStartLoadWithRequest = event => {
-    console.log(event.url);
     if (
       event.url.startsWith('http://') ||
       event.url.startsWith('https://') ||
@@ -208,37 +181,23 @@ export default function App() {
 
   /////////////////////////////
   /////////로딩화면 길게
-  const [loading, setloading] = useState(true);
 
   useEffect(() => {
     setTimeout(() => {
-      // notifee.setBadgeCount(0);
       SplashScreen.hide();
-
-      setloading(false);
     }, 3000);
   }, []);
   /////////메시지받기
+
   const getmessage = async () => {
     messaging().onNotificationOpenedApp(async remoteMessage => {
-      if (remoteMessage) {
-        if (remoteMessage.data) {
-          if (remoteMessage.data.badge) {
-            console.log('onNotificationOpenedApp', remoteMessage.data.badge);
-            notifee
-              .setBadgeCount(Number(remoteMessage.data.badge || 0))
-              .then(console.log);
-          }
-
-          if (remoteMessage.data.click_action) {
-            console.log('onNotificationOpenedApp');
-            const newsourceUrl =
-              'https://ten.members.markets' + remoteMessage.data.click_action;
-            myWebWiew.current.injectJavaScript(`
+      if (remoteMessage?.data?.click_action) {
+        console.log('onNotificationOpenedApp');
+        const newsourceUrl =
+          'https://ten.members.markets' + remoteMessage.data.click_action;
+        myWebWiew.current.injectJavaScript(`
               window.location.href = "${newsourceUrl}";
             `);
-          }
-        }
       }
     });
 
@@ -246,52 +205,24 @@ export default function App() {
     messaging()
       .getInitialNotification()
       .then(async remoteMessage => {
-        if (remoteMessage) {
-          if (remoteMessage.data) {
-            if (remoteMessage.data.badge) {
-              console.log('onNotificationOpenedApp', remoteMessage.data.badge);
-
-              notifee.setBadgeCount(Number(remoteMessage.data.badge || 0));
-            }
-
-            if (remoteMessage.data.click_action) {
-              console.log(
-                'getInitialNotification',
-                remoteMessage.data.click_action,
-              );
-              const newsourceUrl =
-                'https://ten.members.markets' + remoteMessage.data.click_action;
-
-              setsourceUrl(newsourceUrl);
-              myWebWiew.current.injectJavaScript(`
+        if (remoteMessage?.data?.click_action) {
+          const newsourceUrl =
+            'https://ten.members.markets' + remoteMessage.data.click_action;
+          setsourceUrl(newsourceUrl);
+          myWebWiew.current.injectJavaScript(`
                   window.location.href = "${newsourceUrl}";
                 `);
-            }
-          }
         }
       });
 
-    const unsubscribe = messaging().onMessage(async remoteMessage => {
+    return messaging().onMessage(async remoteMessage => {
+      console.log('onMessage', remoteMessage);
       if (remoteMessage.notification?.body) {
         displayNotification(remoteMessage).then(res => {});
       }
-
-      if (remoteMessage.data) {
-        if (remoteMessage.data.badge) {
-          console.log('onMessage', remoteMessage.data.badge);
-          notifee
-            .setBadgeCount(Number(remoteMessage.data.badge || 0))
-            .then(console.log);
-          PushNotification.setApplicationIconBadgeNumber(
-            parseInt(remoteMessage.data.badge),
-          );
-        }
-      }
     });
-
-    return unsubscribe;
   };
-  //////////
+
   async function requestUserPermission() {
     try {
       if (Platform.OS === 'android') {
@@ -303,72 +234,29 @@ export default function App() {
           console.log(statuses);
         });
       } else {
-        const authorizationStatus = await messaging().requestPermission();
-        const enabled =
-          authorizationStatus === messaging.AuthorizationStatus.AUTHORIZED ||
-          authorizationStatus === messaging.AuthorizationStatus.PROVISIONAL;
-
-        if (enabled) {
-          console.log('Authorization status:', authorizationStatus);
-        }
-        {
-        }
+        await messaging().requestPermission();
+        await request(PERMISSIONS.IOS.LOCATION_ALWAYS);
       }
-    } catch (error) {
-      console.log('권한이 없습니다.', error);
-    }
+    } catch (error) {}
   }
 
   useEffect(() => {
     requestUserPermission();
     getmessage();
-
-    if (Platform.OS === 'ios') {
-      const requestPhotoLibraryPermission = async () => {
-        const platformPermissions = await request(
-          PERMISSIONS.IOS.LOCATION_ALWAYS,
-        );
-      };
-      requestPhotoLibraryPermission();
-    }
   }, []);
 
-  const injectJavaScript = `
-    console.log = function(message) {
-      window.ReactNativeWebView.postMessage('CONSOLE_LOG: ' + message);     
-    };
-  `;
-
   useEffect(() => {
-    notifee.onBackgroundEvent(async event => {
-      if (event.detail.notification?.data.badge) {
-        console.log(event.detail.notification?.data.badge);
-        notifee
-          .setBadgeCount(Number(event.detail.notification?.data.badge || 0))
-          .then(console.log);
-      }
-      if (event.detail.notification?.data.click_action) {
-        console.log('onBackgroundEvent');
-        const newsourceUrl =
-          'https://ten.members.markets' +
-          event.detail.notification?.data.click_action;
-        myWebWiew.current.injectJavaScript(`
-            window.location.href = "${newsourceUrl}";
-          `);
-      }
-    });
+    return notifee.onForegroundEvent(async ({type, detail}) => {
+      const {notification, pressAction} = detail;
 
-    return notifee.onForegroundEvent(({type, detail}) => {
-      if (detail.notification?.data.badge) {
-        console.log('onForegroundEvent', detail.notification?.data.badge);
-        notifee
-          .setBadgeCount(Number(detail.notification?.data.badge || 0))
-          .then(console.log);
-      }
+      if (
+        type === EventType.PRESS ||
+        (type === EventType.ACTION_PRESS && pressAction.id === 'mark-as-read')
+      ) {
+        await notifee.decrementBadgeCount();
+        await notifee.cancelNotification(notification.id);
 
-      if (type === EventType.PRESS) {
         if (detail.notification?.data.click_action) {
-          console.log('onForegroundEvent');
           const newsourceUrl =
             'https://ten.members.markets' +
             detail.notification?.data.click_action;
@@ -392,7 +280,7 @@ export default function App() {
         thirdPartyCookiesEnabled={true}
         mediaPlaybackRequiresUserAction={false}
         allowsInlineMediaPlayback={true}
-        //injectedJavaScript={injectJavaScript}
+        injectedJavaScript={``}
         androidHardwareAccelerationDisabled={true}
         onShouldStartLoadWithRequest={event => {
           return onShouldStartLoadWithRequest(event);

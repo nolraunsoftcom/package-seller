@@ -23,7 +23,7 @@ const displayNotification = async (
     },
     ios: {
       foregroundPresentationOptions: {
-        badge: true,
+        badge: false,
         sound: true,
         banner: true,
         list: true,
