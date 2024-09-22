@@ -219,6 +219,14 @@ export default function App() {
       if (remoteMessage.notification?.body) {
         displayNotification(remoteMessage).then(res => {});
       }
+
+      if (remoteMessage?.data?.badge) {
+        notifee
+          .setBadgeCount(Number(remoteMessage.data.badge || 0))
+          .then(() => {
+            console.log('remoteMessage', Platform.OS, remoteMessage.data);
+          });
+      }
     });
   };
 
