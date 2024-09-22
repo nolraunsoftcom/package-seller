@@ -216,7 +216,6 @@ export default function App() {
       });
 
     return messaging().onMessage(async remoteMessage => {
-      console.log('onMessage', remoteMessage);
       if (remoteMessage.notification?.body) {
         displayNotification(remoteMessage).then(res => {});
       }
