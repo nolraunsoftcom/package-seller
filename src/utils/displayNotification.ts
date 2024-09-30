@@ -8,6 +8,8 @@ const displayNotification = async (
     id: 'default',
     name: 'channel',
     importance: AndroidImportance.HIGH,
+    vibration: true,
+    sound: 'noti_sound',
   });
 
   await notifee.displayNotification({
@@ -15,6 +17,7 @@ const displayNotification = async (
     body: message?.notification?.body,
     data: message.data,
     android: {
+      sound: 'noti_sound',
       channelId,
       pressAction: {
         launchActivity: 'default',
@@ -22,6 +25,7 @@ const displayNotification = async (
       },
     },
     ios: {
+      sound: 'noti_sound.wav',
       foregroundPresentationOptions: {
         badge: false,
         sound: true,

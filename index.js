@@ -9,10 +9,8 @@ import {firebase} from '@react-native-firebase/messaging';
 import notifee, {EventType} from '@notifee/react-native';
 
 firebase.messaging().setBackgroundMessageHandler(async remoteMessage => {
-  if (remoteMessage?.notification?.body) {
-    await notifee.displayNotification(remoteMessage);
-    await notifee.incrementBadgeCount();
-  }
+  await notifee.displayNotification(remoteMessage);
+  await notifee.incrementBadgeCount();
 });
 
 notifee.onBackgroundEvent(async event => {

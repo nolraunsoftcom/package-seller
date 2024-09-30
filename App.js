@@ -214,20 +214,6 @@ export default function App() {
                 `);
         }
       });
-
-    return messaging().onMessage(async remoteMessage => {
-      if (remoteMessage.notification?.body) {
-        displayNotification(remoteMessage).then(res => {});
-      }
-
-      if (remoteMessage?.data?.badge) {
-        notifee
-          .setBadgeCount(Number(remoteMessage.data.badge || 0))
-          .then(() => {
-            console.log('remoteMessage', Platform.OS, remoteMessage.data);
-          });
-      }
-    });
   };
 
   async function requestUserPermission() {
@@ -250,6 +236,21 @@ export default function App() {
   useEffect(() => {
     requestUserPermission();
     getmessage();
+
+    return messaging().onMessage(async remoteMessage => {
+      if (remoteMessage.notification?.body) {
+        displayNotification(remoteMessage).then(res => {});
+        // notifee.displayNotification(remoteMessage);
+      }
+
+      if (remoteMessage?.data?.badge) {
+        notifee
+          .setBadgeCount(Number(remoteMessage.data.badge || 0))
+          .then(() => {
+            console.log('remoteMessage', Platform.OS, remoteMessage.data);
+          });
+      }
+    });
   }, []);
 
   useEffect(() => {
