@@ -6,10 +6,26 @@ import {AppRegistry, Platform} from 'react-native';
 import App from './App';
 import {name as appName} from './app.json';
 import {firebase} from '@react-native-firebase/messaging';
-import notifee, {EventType} from '@notifee/react-native';
+import notifee, {EventType, AndroidImportance} from '@notifee/react-native';
 
 firebase.messaging().setBackgroundMessageHandler(async remoteMessage => {
-  await notifee.displayNotification(remoteMessage);
+  const channelId = await notifee.createChannel({
+    id: 'default',
+    name: 'channel',
+    importance: AndroidImportance.HIGH,
+    vibration: true,
+    sound: 'noti_sound',
+  });
+
+  const android = Object.assign(remoteMessage.notification.android, {
+    sound: 'noti_sound',
+    channelId,
+  });
+
+  await notifee.displayNotification({
+    ...remoteMessage,
+    android,
+  });
   await notifee.incrementBadgeCount();
 });
 
