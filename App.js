@@ -16,9 +16,10 @@ import Geolocation from '@react-native-community/geolocation';
 import {displayNotification} from './src/utils/displayNotification';
 import notifee, {EventType} from '@notifee/react-native';
 
+const baseUrl = 'https://pmp.members.markets';
 export default function App() {
   const myWebWiew = useRef();
-  const [sourceUrl, setsourceUrl] = useState('https://ten.members.markets');
+  const [sourceUrl, setsourceUrl] = useState(baseUrl);
   const [pays, setpays] = useState([
     'supertoss://',
     'kb-acp://',
@@ -124,9 +125,8 @@ export default function App() {
 
             if (res.isNeeded) {
               const anurl =
-                'https://play.google.com/store/apps/details?id=com.orora.tenpercent';
-              const iosurl =
-                'https://apps.apple.com/us/app/ten-percent-텐퍼센트/id6475812515';
+                'https://play.google.com/store/apps/details?id=com.orora.pungmuprugio';
+              const iosurl = 'https://apps.apple.com/us/app/id6736399602';
               const gourl = Platform.OS === 'android' ? anurl : iosurl;
               Alert.alert(
                 '앱이 최신버전이 아닙니다.',
@@ -173,6 +173,14 @@ export default function App() {
     }
   }, [swexit]);
   useEffect(() => {
+    messaging()
+      .getToken()
+      .then(async token => {
+        console.log('token', token);
+      })
+      .catch(e => {
+        console.log(e);
+      });
     BackHandler.addEventListener('hardwareBackPress', backAction);
 
     return () =>
@@ -193,8 +201,7 @@ export default function App() {
     messaging().onNotificationOpenedApp(async remoteMessage => {
       if (remoteMessage?.data?.click_action) {
         console.log('onNotificationOpenedApp');
-        const newsourceUrl =
-          'https://ten.members.markets' + remoteMessage.data.click_action;
+        const newsourceUrl = baseUrl + remoteMessage.data.click_action;
         myWebWiew.current.injectJavaScript(`
               window.location.href = "${newsourceUrl}";
             `);
@@ -206,8 +213,7 @@ export default function App() {
       .getInitialNotification()
       .then(async remoteMessage => {
         if (remoteMessage?.data?.click_action) {
-          const newsourceUrl =
-            'https://ten.members.markets' + remoteMessage.data.click_action;
+          const newsourceUrl = baseUrl + remoteMessage.data.click_action;
           setsourceUrl(newsourceUrl);
           myWebWiew.current.injectJavaScript(`
                   window.location.href = "${newsourceUrl}";
@@ -265,9 +271,7 @@ export default function App() {
         await notifee.cancelNotification(notification.id);
 
         if (detail.notification?.data.click_action) {
-          const newsourceUrl =
-            'https://ten.members.markets' +
-            detail.notification?.data.click_action;
+          const newsourceUrl = baseUrl + detail.notification?.data.click_action;
           myWebWiew.current.injectJavaScript(`
               window.location.href = "${newsourceUrl}";
             `);

@@ -7,17 +7,17 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
-		00E356F31AD99517003FC87E /* tenpercentTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* tenpercentTests.m */; };
+		00E356F31AD99517003FC87E /* pungmuprugioTests.m in Sources */ = {isa = PBXBuildFile; fileRef = 00E356F21AD99517003FC87E /* pungmuprugioTests.m */; };
 		13B07FBC1A68108700A75B9A /* AppDelegate.mm in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB01A68108700A75B9A /* AppDelegate.mm */; };
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
-		5C1506642B4FE5F10065A9C2 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 5C1506632B4FE5F10065A9C2 /* GoogleService-Info.plist */; };
 		5C19EC292BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 5C19EC282BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy */; };
 		640A23F02C9EC53E00648329 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 640A23EF2C9EC53E00648329 /* splash.png */; };
+		6423AC662CAD7BA600627887 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6423AC652CAD7BA600627887 /* GoogleService-Info.plist */; };
 		6424EEF32CAADEA000106BA5 /* noti_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6424EEF22CAADEA000106BA5 /* noti_sound.wav */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
-		863CC18AF12FFFEDB82338F2 /* libPods-tenpercent.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2EA5E03D459948886B756A /* libPods-tenpercent.a */; };
-		DF84875D65C5D38CA56E9BE5 /* libPods-tenpercent-tenpercentTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEDB456E3150F24FE007937 /* libPods-tenpercent-tenpercentTests.a */; };
+		863CC18AF12FFFEDB82338F2 /* libPods-pungmuprugio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2EA5E03D459948886B756A /* libPods-pungmuprugio.a */; };
+		DF84875D65C5D38CA56E9BE5 /* libPods-pungmuprugio-pungmuprugioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEDB456E3150F24FE007937 /* libPods-pungmuprugio-pungmuprugioTests.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -26,33 +26,34 @@
 			containerPortal = 83CBB9F71A601CBA00E9B192 /* Project object */;
 			proxyType = 1;
 			remoteGlobalIDString = 13B07F861A680F5B00A75B9A;
-			remoteInfo = tenpercent;
+			remoteInfo = pungmuprugio;
 		};
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
-		00E356EE1AD99517003FC87E /* tenpercentTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = tenpercentTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
+		00E356EE1AD99517003FC87E /* pungmuprugioTests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = pungmuprugioTests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		00E356F11AD99517003FC87E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		00E356F21AD99517003FC87E /* tenpercentTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = tenpercentTests.m; sourceTree = "<group>"; };
-		13B07F961A680F5B00A75B9A /* tenpercent.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = tenpercent.app; sourceTree = BUILT_PRODUCTS_DIR; };
-		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = tenpercent/AppDelegate.h; sourceTree = "<group>"; };
-		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = tenpercent/AppDelegate.mm; sourceTree = "<group>"; };
-		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = tenpercent/Images.xcassets; sourceTree = "<group>"; };
-		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = tenpercent/Info.plist; sourceTree = "<group>"; };
-		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = tenpercent/main.m; sourceTree = "<group>"; };
-		3B4392A12AC88292D35C810B /* Pods-tenpercent.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tenpercent.debug.xcconfig"; path = "Target Support Files/Pods-tenpercent/Pods-tenpercent.debug.xcconfig"; sourceTree = "<group>"; };
-		5709B34CF0A7D63546082F79 /* Pods-tenpercent.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tenpercent.release.xcconfig"; path = "Target Support Files/Pods-tenpercent/Pods-tenpercent.release.xcconfig"; sourceTree = "<group>"; };
-		5B7EB9410499542E8C5724F5 /* Pods-tenpercent-tenpercentTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tenpercent-tenpercentTests.debug.xcconfig"; path = "Target Support Files/Pods-tenpercent-tenpercentTests/Pods-tenpercent-tenpercentTests.debug.xcconfig"; sourceTree = "<group>"; };
-		5C1506622B4FE5D30065A9C2 /* tenpercent.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = tenpercent.entitlements; path = tenpercent/tenpercent.entitlements; sourceTree = "<group>"; };
-		5C1506632B4FE5F10065A9C2 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "tenpercent/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		00E356F21AD99517003FC87E /* pungmuprugioTests.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = pungmuprugioTests.m; sourceTree = "<group>"; };
+		13B07F961A680F5B00A75B9A /* pungmuprugio.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = pungmuprugio.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		13B07FAF1A68108700A75B9A /* AppDelegate.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = AppDelegate.h; path = pungmuprugio/AppDelegate.h; sourceTree = "<group>"; };
+		13B07FB01A68108700A75B9A /* AppDelegate.mm */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.cpp.objcpp; name = AppDelegate.mm; path = pungmuprugio/AppDelegate.mm; sourceTree = "<group>"; };
+		13B07FB51A68108700A75B9A /* Images.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = Images.xcassets; path = pungmuprugio/Images.xcassets; sourceTree = "<group>"; };
+		13B07FB61A68108700A75B9A /* Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = Info.plist; path = pungmuprugio/Info.plist; sourceTree = "<group>"; };
+		13B07FB71A68108700A75B9A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; name = main.m; path = pungmuprugio/main.m; sourceTree = "<group>"; };
+		3B4392A12AC88292D35C810B /* Pods-pungmuprugio.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pungmuprugio.debug.xcconfig"; path = "Target Support Files/Pods-pungmuprugio/Pods-pungmuprugio.debug.xcconfig"; sourceTree = "<group>"; };
+		5709B34CF0A7D63546082F79 /* Pods-pungmuprugio.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pungmuprugio.release.xcconfig"; path = "Target Support Files/Pods-pungmuprugio/Pods-pungmuprugio.release.xcconfig"; sourceTree = "<group>"; };
+		5B7EB9410499542E8C5724F5 /* Pods-pungmuprugio-pungmuprugioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pungmuprugio-pungmuprugioTests.debug.xcconfig"; path = "Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests.debug.xcconfig"; sourceTree = "<group>"; };
+		5C1506622B4FE5D30065A9C2 /* pungmuprugio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = pungmuprugio.entitlements; path = pungmuprugio/pungmuprugio.entitlements; sourceTree = "<group>"; };
 		5C19EC282BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
 		640A23EF2C9EC53E00648329 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = ../assets/splash.png; sourceTree = "<group>"; };
+		6423AC652CAD7BA600627887 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../files/GoogleService-Info.plist"; sourceTree = "<group>"; };
+		6423AC672CAD7F8500627887 /* pungmuprugioDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = pungmuprugioDebug.entitlements; path = pungmuprugio/pungmuprugioDebug.entitlements; sourceTree = "<group>"; };
 		6424EEF22CAADEA000106BA5 /* noti_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = noti_sound.wav; path = ../assets/noti_sound.wav; sourceTree = "<group>"; };
-		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = tenpercent/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		89C6BE57DB24E9ADA2F236DE /* Pods-tenpercent-tenpercentTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-tenpercent-tenpercentTests.release.xcconfig"; path = "Target Support Files/Pods-tenpercent-tenpercentTests/Pods-tenpercent-tenpercentTests.release.xcconfig"; sourceTree = "<group>"; };
+		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = pungmuprugio/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		89C6BE57DB24E9ADA2F236DE /* Pods-pungmuprugio-pungmuprugioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pungmuprugio-pungmuprugioTests.release.xcconfig"; path = "Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
-		EF2EA5E03D459948886B756A /* libPods-tenpercent.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tenpercent.a"; sourceTree = BUILT_PRODUCTS_DIR; };
-		FCEDB456E3150F24FE007937 /* libPods-tenpercent-tenpercentTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-tenpercent-tenpercentTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		EF2EA5E03D459948886B756A /* libPods-pungmuprugio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pungmuprugio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
+		FCEDB456E3150F24FE007937 /* libPods-pungmuprugio-pungmuprugioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pungmuprugio-pungmuprugioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -60,7 +61,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				DF84875D65C5D38CA56E9BE5 /* libPods-tenpercent-tenpercentTests.a in Frameworks */,
+				DF84875D65C5D38CA56E9BE5 /* libPods-pungmuprugio-pungmuprugioTests.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -68,20 +69,20 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				863CC18AF12FFFEDB82338F2 /* libPods-tenpercent.a in Frameworks */,
+				863CC18AF12FFFEDB82338F2 /* libPods-pungmuprugio.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
-		00E356EF1AD99517003FC87E /* tenpercentTests */ = {
+		00E356EF1AD99517003FC87E /* pungmuprugioTests */ = {
 			isa = PBXGroup;
 			children = (
-				00E356F21AD99517003FC87E /* tenpercentTests.m */,
+				00E356F21AD99517003FC87E /* pungmuprugioTests.m */,
 				00E356F01AD99517003FC87E /* Supporting Files */,
 			);
-			path = tenpercentTests;
+			path = pungmuprugioTests;
 			sourceTree = "<group>";
 		};
 		00E356F01AD99517003FC87E /* Supporting Files */ = {
@@ -92,13 +93,14 @@
 			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
-		13B07FAE1A68108700A75B9A /* tenpercent */ = {
+		13B07FAE1A68108700A75B9A /* pungmuprugio */ = {
 			isa = PBXGroup;
 			children = (
-				5C1506632B4FE5F10065A9C2 /* GoogleService-Info.plist */,
-				5C1506622B4FE5D30065A9C2 /* tenpercent.entitlements */,
+				6423AC672CAD7F8500627887 /* pungmuprugioDebug.entitlements */,
+				5C1506622B4FE5D30065A9C2 /* pungmuprugio.entitlements */,
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
+				6423AC652CAD7BA600627887 /* GoogleService-Info.plist */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
@@ -106,15 +108,15 @@
 				13B07FB71A68108700A75B9A /* main.m */,
 				5C19EC282BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy */,
 			);
-			name = tenpercent;
+			name = pungmuprugio;
 			sourceTree = "<group>";
 		};
 		2D16E6871FA4F8E400B85C8A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
 				ED297162215061F000B7C4FE /* JavaScriptCore.framework */,
-				EF2EA5E03D459948886B756A /* libPods-tenpercent.a */,
-				FCEDB456E3150F24FE007937 /* libPods-tenpercent-tenpercentTests.a */,
+				EF2EA5E03D459948886B756A /* libPods-pungmuprugio.a */,
+				FCEDB456E3150F24FE007937 /* libPods-pungmuprugio-pungmuprugioTests.a */,
 			);
 			name = Frameworks;
 			sourceTree = "<group>";
@@ -138,9 +140,9 @@
 		83CBB9F61A601CBA00E9B192 = {
 			isa = PBXGroup;
 			children = (
-				13B07FAE1A68108700A75B9A /* tenpercent */,
+				13B07FAE1A68108700A75B9A /* pungmuprugio */,
 				832341AE1AAA6A7D00B99B32 /* Libraries */,
-				00E356EF1AD99517003FC87E /* tenpercentTests */,
+				00E356EF1AD99517003FC87E /* pungmuprugioTests */,
 				83CBBA001A601CBA00E9B192 /* Products */,
 				2D16E6871FA4F8E400B85C8A /* Frameworks */,
 				BBD78D7AC51CEA395F1C20DB /* Pods */,
@@ -153,8 +155,8 @@
 		83CBBA001A601CBA00E9B192 /* Products */ = {
 			isa = PBXGroup;
 			children = (
-				13B07F961A680F5B00A75B9A /* tenpercent.app */,
-				00E356EE1AD99517003FC87E /* tenpercentTests.xctest */,
+				13B07F961A680F5B00A75B9A /* pungmuprugio.app */,
+				00E356EE1AD99517003FC87E /* pungmuprugioTests.xctest */,
 			);
 			name = Products;
 			sourceTree = "<group>";
@@ -162,10 +164,10 @@
 		BBD78D7AC51CEA395F1C20DB /* Pods */ = {
 			isa = PBXGroup;
 			children = (
-				3B4392A12AC88292D35C810B /* Pods-tenpercent.debug.xcconfig */,
-				5709B34CF0A7D63546082F79 /* Pods-tenpercent.release.xcconfig */,
-				5B7EB9410499542E8C5724F5 /* Pods-tenpercent-tenpercentTests.debug.xcconfig */,
-				89C6BE57DB24E9ADA2F236DE /* Pods-tenpercent-tenpercentTests.release.xcconfig */,
+				3B4392A12AC88292D35C810B /* Pods-pungmuprugio.debug.xcconfig */,
+				5709B34CF0A7D63546082F79 /* Pods-pungmuprugio.release.xcconfig */,
+				5B7EB9410499542E8C5724F5 /* Pods-pungmuprugio-pungmuprugioTests.debug.xcconfig */,
+				89C6BE57DB24E9ADA2F236DE /* Pods-pungmuprugio-pungmuprugioTests.release.xcconfig */,
 			);
 			path = Pods;
 			sourceTree = "<group>";
@@ -173,9 +175,9 @@
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
-		00E356ED1AD99517003FC87E /* tenpercentTests */ = {
+		00E356ED1AD99517003FC87E /* pungmuprugioTests */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "tenpercentTests" */;
+			buildConfigurationList = 00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "pungmuprugioTests" */;
 			buildPhases = (
 				A55EABD7B0C7F3A422A6CC61 /* [CP] Check Pods Manifest.lock */,
 				00E356EA1AD99517003FC87E /* Sources */,
@@ -189,14 +191,14 @@
 			dependencies = (
 				00E356F51AD99517003FC87E /* PBXTargetDependency */,
 			);
-			name = tenpercentTests;
-			productName = tenpercentTests;
-			productReference = 00E356EE1AD99517003FC87E /* tenpercentTests.xctest */;
+			name = pungmuprugioTests;
+			productName = pungmuprugioTests;
+			productReference = 00E356EE1AD99517003FC87E /* pungmuprugioTests.xctest */;
 			productType = "com.apple.product-type.bundle.unit-test";
 		};
-		13B07F861A680F5B00A75B9A /* tenpercent */ = {
+		13B07F861A680F5B00A75B9A /* pungmuprugio */ = {
 			isa = PBXNativeTarget;
-			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "tenpercent" */;
+			buildConfigurationList = 13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "pungmuprugio" */;
 			buildPhases = (
 				C38B50BA6285516D6DCD4F65 /* [CP] Check Pods Manifest.lock */,
 				FD10A7F022414F080027D42C /* Start Packager */,
@@ -212,9 +214,9 @@
 			);
 			dependencies = (
 			);
-			name = tenpercent;
-			productName = tenpercent;
-			productReference = 13B07F961A680F5B00A75B9A /* tenpercent.app */;
+			name = pungmuprugio;
+			productName = pungmuprugio;
+			productReference = 13B07F961A680F5B00A75B9A /* pungmuprugio.app */;
 			productType = "com.apple.product-type.application";
 		};
 /* End PBXNativeTarget section */
@@ -234,7 +236,7 @@
 					};
 				};
 			};
-			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "tenpercent" */;
+			buildConfigurationList = 83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "pungmuprugio" */;
 			compatibilityVersion = "Xcode 12.0";
 			developmentRegion = en;
 			hasScannedForEncodings = 0;
@@ -247,8 +249,8 @@
 			projectDirPath = "";
 			projectRoot = "";
 			targets = (
-				13B07F861A680F5B00A75B9A /* tenpercent */,
-				00E356ED1AD99517003FC87E /* tenpercentTests */,
+				13B07F861A680F5B00A75B9A /* pungmuprugio */,
+				00E356ED1AD99517003FC87E /* pungmuprugioTests */,
 			);
 		};
 /* End PBXProject section */
@@ -269,8 +271,8 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				6424EEF32CAADEA000106BA5 /* noti_sound.wav in Resources */,
 				5C19EC292BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy in Resources */,
-				5C1506642B4FE5F10065A9C2 /* GoogleService-Info.plist in Resources */,
 				640A23F02C9EC53E00648329 /* splash.png in Resources */,
+				6423AC662CAD7BA600627887 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -299,15 +301,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tenpercent/Pods-tenpercent-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio/Pods-pungmuprugio-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tenpercent/Pods-tenpercent-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio/Pods-pungmuprugio-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tenpercent/Pods-tenpercent-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio/Pods-pungmuprugio-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		2A3A19E890D9BAF5E74FC7F1 /* [CP-User] [RNFB] Core Configuration */ = {
@@ -338,7 +340,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-tenpercent-tenpercentTests-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-pungmuprugio-pungmuprugioTests-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -360,7 +362,7 @@
 			outputFileListPaths = (
 			);
 			outputPaths = (
-				"$(DERIVED_FILE_DIR)/Pods-tenpercent-checkManifestLockResult.txt",
+				"$(DERIVED_FILE_DIR)/Pods-pungmuprugio-checkManifestLockResult.txt",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
@@ -373,15 +375,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tenpercent-tenpercentTests/Pods-tenpercent-tenpercentTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests-frameworks-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tenpercent-tenpercentTests/Pods-tenpercent-tenpercentTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests-frameworks-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tenpercent-tenpercentTests/Pods-tenpercent-tenpercentTests-frameworks.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests-frameworks.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		E235C05ADACE081382539298 /* [CP] Copy Pods Resources */ = {
@@ -390,15 +392,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tenpercent/Pods-tenpercent-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio/Pods-pungmuprugio-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tenpercent/Pods-tenpercent-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio/Pods-pungmuprugio-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tenpercent/Pods-tenpercent-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio/Pods-pungmuprugio-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		F6A41C54EA430FDDC6A6ED99 /* [CP] Copy Pods Resources */ = {
@@ -407,15 +409,15 @@
 			files = (
 			);
 			inputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tenpercent-tenpercentTests/Pods-tenpercent-tenpercentTests-resources-${CONFIGURATION}-input-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests-resources-${CONFIGURATION}-input-files.xcfilelist",
 			);
 			name = "[CP] Copy Pods Resources";
 			outputFileListPaths = (
-				"${PODS_ROOT}/Target Support Files/Pods-tenpercent-tenpercentTests/Pods-tenpercent-tenpercentTests-resources-${CONFIGURATION}-output-files.xcfilelist",
+				"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests-resources-${CONFIGURATION}-output-files.xcfilelist",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 			shellPath = /bin/sh;
-			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-tenpercent-tenpercentTests/Pods-tenpercent-tenpercentTests-resources.sh\"\n";
+			shellScript = "\"${PODS_ROOT}/Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests-resources.sh\"\n";
 			showEnvVarsInLog = 0;
 		};
 		FD10A7F022414F080027D42C /* Start Packager */ = {
@@ -444,7 +446,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				00E356F31AD99517003FC87E /* tenpercentTests.m in Sources */,
+				00E356F31AD99517003FC87E /* pungmuprugioTests.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -462,7 +464,7 @@
 /* Begin PBXTargetDependency section */
 		00E356F51AD99517003FC87E /* PBXTargetDependency */ = {
 			isa = PBXTargetDependency;
-			target = 13B07F861A680F5B00A75B9A /* tenpercent */;
+			target = 13B07F861A680F5B00A75B9A /* pungmuprugio */;
 			targetProxy = 00E356F41AD99517003FC87E /* PBXContainerItemProxy */;
 		};
 /* End PBXTargetDependency section */
@@ -470,14 +472,14 @@
 /* Begin XCBuildConfiguration section */
 		00E356F61AD99517003FC87E /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-tenpercent-tenpercentTests.debug.xcconfig */;
+			baseConfigurationReference = 5B7EB9410499542E8C5724F5 /* Pods-pungmuprugio-pungmuprugioTests.debug.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				GCC_PREPROCESSOR_DEFINITIONS = (
 					"DEBUG=1",
 					"$(inherited)",
 				);
-				INFOPLIST_FILE = tenpercentTests/Info.plist;
+				INFOPLIST_FILE = pungmuprugioTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -489,19 +491,19 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orora.tenpercent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orora.pungmuprugio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tenpercent.app/tenpercent";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pungmuprugio.app/pungmuprugio";
 			};
 			name = Debug;
 		};
 		00E356F71AD99517003FC87E /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-tenpercent-tenpercentTests.release.xcconfig */;
+			baseConfigurationReference = 89C6BE57DB24E9ADA2F236DE /* Pods-pungmuprugio-pungmuprugioTests.release.xcconfig */;
 			buildSettings = {
 				BUNDLE_LOADER = "$(TEST_HOST)";
 				COPY_PHASE_STRIP = NO;
-				INFOPLIST_FILE = tenpercentTests/Info.plist;
+				INFOPLIST_FILE = pungmuprugioTests/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -513,41 +515,43 @@
 					"-lc++",
 					"$(inherited)",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orora.tenpercent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orora.pungmuprugio;
 				PRODUCT_NAME = "$(TARGET_NAME)";
-				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/tenpercent.app/tenpercent";
+				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/pungmuprugio.app/pungmuprugio";
 			};
 			name = Release;
 		};
 		13B07F941A680F5B00A75B9A /* Debug */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-tenpercent.debug.xcconfig */;
+			baseConfigurationReference = 3B4392A12AC88292D35C810B /* Pods-pungmuprugio.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = tenpercent/tenpercent.entitlements;
+				CODE_SIGN_ENTITLEMENTS = pungmuprugio/pungmuprugioDebug.entitlements;
+				CODE_SIGN_IDENTITY = "Apple Development";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C3N8GKX588;
 				ENABLE_BITCODE = NO;
-				INFOPLIST_FILE = tenpercent/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "향산힐스";
+				INFOPLIST_FILE = pungmuprugio/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "풍무푸르지오";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orora.tenpercent;
-				PRODUCT_NAME = tenpercent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orora.pungmuprugio;
+				PRODUCT_NAME = pungmuprugio;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = eonsang_dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = pungmuprugio_dev;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -561,33 +565,33 @@
 		};
 		13B07F951A680F5B00A75B9A /* Release */ = {
 			isa = XCBuildConfiguration;
-			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-tenpercent.release.xcconfig */;
+			baseConfigurationReference = 5709B34CF0A7D63546082F79 /* Pods-pungmuprugio.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = tenpercent/tenpercent.entitlements;
+				CODE_SIGN_ENTITLEMENTS = "";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
 				CURRENT_PROJECT_VERSION = 1;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C3N8GKX588;
-				INFOPLIST_FILE = tenpercent/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "향산힐스";
+				INFOPLIST_FILE = pungmuprugio/Info.plist;
+				INFOPLIST_KEY_CFBundleDisplayName = "풍무푸르지오";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				MARKETING_VERSION = 1.1.4;
+				MARKETING_VERSION = 0.0.1;
 				OTHER_LDFLAGS = (
 					"$(inherited)",
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orora.tenpercent;
-				PRODUCT_NAME = tenpercent;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orora.pungmuprugio;
+				PRODUCT_NAME = pungmuprugio;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = eonsang_prod;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = pungmuprugio_prod;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -768,7 +772,7 @@
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
-		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "tenpercentTests" */ = {
+		00E357021AD99517003FC87E /* Build configuration list for PBXNativeTarget "pungmuprugioTests" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				00E356F61AD99517003FC87E /* Debug */,
@@ -777,7 +781,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "tenpercent" */ = {
+		13B07F931A680F5B00A75B9A /* Build configuration list for PBXNativeTarget "pungmuprugio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				13B07F941A680F5B00A75B9A /* Debug */,
@@ -786,7 +790,7 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
-		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "tenpercent" */ = {
+		83CBB9FA1A601CBA00E9B192 /* Build configuration list for PBXProject "pungmuprugio" */ = {
 			isa = XCConfigurationList;
 			buildConfigurations = (
 				83CBBA201A601CBA00E9B192 /* Debug */,

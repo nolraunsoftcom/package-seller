@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyBC8nEYXMgLCewLB7Zu0pitvMKuqV_4bic</string>
+	<string>AIzaSyDBpL3NnHZtd0l6vDcyxKcIzHrbaVKE0us</string>
 	<key>GCM_SENDER_ID</key>
-	<string>3934364914</string>
+	<string>162603775221</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.orora.tenpercent</string>
+	<string>com.orora.pungmuprugio</string>
 	<key>PROJECT_ID</key>
-	<string>tenpercent-84a0d</string>
+	<string>pungmuprugio-97e3e</string>
 	<key>STORAGE_BUCKET</key>
-	<string>tenpercent-84a0d.appspot.com</string>
+	<string>pungmuprugio-97e3e.appspot.com</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:3934364914:ios:f7a764caafdcbfdd619c6b</string>
+	<string>1:162603775221:ios:5d0075c7a2c4bb4e9e41bc</string>
 </dict>
 </plist>

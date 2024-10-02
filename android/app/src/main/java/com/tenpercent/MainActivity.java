@@ -1,4 +1,4 @@
-package com.orora.tenpercent;
+package com.orora.pungmuprugio;
 
 
 import android.os.Bundle;
@@ -19,7 +19,7 @@ public class MainActivity extends ReactActivity {
    */
   @Override
   protected String getMainComponentName() {
-    return "tenpercent";
+    return "pungmuprugio";
   }
 
 

@@ -38,7 +38,7 @@ if linkage != nil
   use_frameworks! :linkage => linkage.to_sym
 end
 
-target 'tenpercent' do
+target 'pungmuprugio' do
   config = use_native_modules!
   pod 'GoogleUtilities', :modular_headers => true
   pod 'FirebaseCore', :modular_headers => true
@@ -61,7 +61,7 @@ target 'tenpercent' do
     :app_path => "#{Pod::Config.instance.installation_root}/.."
   )
 
-  target 'tenpercentTests' do
+  target 'pungmuprugioTests' do
     inherit! :complete
     # Pods for testing
   end
