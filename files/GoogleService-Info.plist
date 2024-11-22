@@ -3,17 +3,17 @@
 <plist version="1.0">
 <dict>
 	<key>API_KEY</key>
-	<string>AIzaSyDBpL3NnHZtd0l6vDcyxKcIzHrbaVKE0us</string>
+	<string>AIzaSyA5EG4wJWlcB9Yu89b3b4x7h3nvr_GsGAc</string>
 	<key>GCM_SENDER_ID</key>
-	<string>162603775221</string>
+	<string>459639509634</string>
 	<key>PLIST_VERSION</key>
 	<string>1</string>
 	<key>BUNDLE_ID</key>
-	<string>com.orora.pungmuprugio</string>
+	<string>com.orora.matgong</string>
 	<key>PROJECT_ID</key>
-	<string>pungmuprugio-97e3e</string>
+	<string>matgong-d881c</string>
 	<key>STORAGE_BUCKET</key>
-	<string>pungmuprugio-97e3e.appspot.com</string>
+	<string>matgong-d881c.firebasestorage.app</string>
 	<key>IS_ADS_ENABLED</key>
 	<false></false>
 	<key>IS_ANALYTICS_ENABLED</key>
@@ -25,6 +25,6 @@
 	<key>IS_SIGNIN_ENABLED</key>
 	<true></true>
 	<key>GOOGLE_APP_ID</key>
-	<string>1:162603775221:ios:5d0075c7a2c4bb4e9e41bc</string>
+	<string>1:459639509634:ios:95c1f12ec69983d838da9b</string>
 </dict>
 </plist>

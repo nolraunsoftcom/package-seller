@@ -22,11 +22,11 @@ firebase.messaging().setBackgroundMessageHandler(async remoteMessage => {
     channelId,
   });
 
+  remoteMessage.android = android;
   await notifee.displayNotification({
-    ...remoteMessage,
-    android,
+    remoteMessage,
   });
-  await notifee.incrementBadgeCount();
+  // await notifee.incrementBadgeCount();
 });
 
 notifee.onBackgroundEvent(async event => {

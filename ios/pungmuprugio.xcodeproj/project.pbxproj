@@ -12,9 +12,9 @@
 		13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 13B07FB51A68108700A75B9A /* Images.xcassets */; };
 		13B07FC11A68108700A75B9A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 13B07FB71A68108700A75B9A /* main.m */; };
 		5C19EC292BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy in Resources */ = {isa = PBXBuildFile; fileRef = 5C19EC282BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy */; };
-		640A23F02C9EC53E00648329 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 640A23EF2C9EC53E00648329 /* splash.png */; };
 		6423AC662CAD7BA600627887 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 6423AC652CAD7BA600627887 /* GoogleService-Info.plist */; };
 		6424EEF32CAADEA000106BA5 /* noti_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6424EEF22CAADEA000106BA5 /* noti_sound.wav */; };
+		6438BA112CF0F3CA00E9E333 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = 6438BA102CF0F3CA00E9E333 /* splash.png */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		863CC18AF12FFFEDB82338F2 /* libPods-pungmuprugio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2EA5E03D459948886B756A /* libPods-pungmuprugio.a */; };
 		DF84875D65C5D38CA56E9BE5 /* libPods-pungmuprugio-pungmuprugioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEDB456E3150F24FE007937 /* libPods-pungmuprugio-pungmuprugioTests.a */; };
@@ -45,10 +45,10 @@
 		5B7EB9410499542E8C5724F5 /* Pods-pungmuprugio-pungmuprugioTests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pungmuprugio-pungmuprugioTests.debug.xcconfig"; path = "Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests.debug.xcconfig"; sourceTree = "<group>"; };
 		5C1506622B4FE5D30065A9C2 /* pungmuprugio.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = pungmuprugio.entitlements; path = pungmuprugio/pungmuprugio.entitlements; sourceTree = "<group>"; };
 		5C19EC282BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy */ = {isa = PBXFileReference; lastKnownFileType = text.xml; path = PrivacyInfo.xcprivacy; sourceTree = "<group>"; };
-		640A23EF2C9EC53E00648329 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = ../assets/splash.png; sourceTree = "<group>"; };
 		6423AC652CAD7BA600627887 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../files/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		6423AC672CAD7F8500627887 /* pungmuprugioDebug.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = pungmuprugioDebug.entitlements; path = pungmuprugio/pungmuprugioDebug.entitlements; sourceTree = "<group>"; };
 		6424EEF22CAADEA000106BA5 /* noti_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = noti_sound.wav; path = ../assets/noti_sound.wav; sourceTree = "<group>"; };
+		6438BA102CF0F3CA00E9E333 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = ../files/splash.png; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = pungmuprugio/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-pungmuprugio-pungmuprugioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pungmuprugio-pungmuprugioTests.release.xcconfig"; path = "Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests.release.xcconfig"; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -102,9 +102,9 @@
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				6423AC652CAD7BA600627887 /* GoogleService-Info.plist */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
+				6438BA102CF0F3CA00E9E333 /* splash.png */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
-				640A23EF2C9EC53E00648329 /* splash.png */,
 				13B07FB71A68108700A75B9A /* main.m */,
 				5C19EC282BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy */,
 			);
@@ -271,7 +271,7 @@
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				6424EEF32CAADEA000106BA5 /* noti_sound.wav in Resources */,
 				5C19EC292BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy in Resources */,
-				640A23F02C9EC53E00648329 /* splash.png in Resources */,
+				6438BA112CF0F3CA00E9E333 /* splash.png in Resources */,
 				6423AC662CAD7BA600627887 /* GoogleService-Info.plist in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -536,7 +536,7 @@
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C3N8GKX588;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = pungmuprugio/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "풍무푸르지오";
+				INFOPLIST_KEY_CFBundleDisplayName = "맛있는공구";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -576,7 +576,7 @@
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C3N8GKX588;
 				INFOPLIST_FILE = pungmuprugio/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "풍무푸르지오";
+				INFOPLIST_KEY_CFBundleDisplayName = "맛있는공구";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -588,7 +588,7 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orora.pungmuprugio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orora.matgong;
 				PRODUCT_NAME = pungmuprugio;
 				PROVISIONING_PROFILE_SPECIFIER = "";
 				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = pungmuprugio_prod;

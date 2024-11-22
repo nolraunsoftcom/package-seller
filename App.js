@@ -16,7 +16,7 @@ import Geolocation from '@react-native-community/geolocation';
 import {displayNotification} from './src/utils/displayNotification';
 import notifee, {EventType} from '@notifee/react-native';
 
-const baseUrl = 'https://pmp.members.markets';
+const baseUrl = 'https://tastymarket.members.markets';
 export default function App() {
   const myWebWiew = useRef();
   const [sourceUrl, setsourceUrl] = useState(baseUrl);
@@ -105,7 +105,7 @@ export default function App() {
       messaging()
         .getToken()
         .then(async token => {
-          console.log('token', token);
+          console.log(token);
           VersionCheck.needUpdate().then(async res => {
             console.log('res', res.isNeeded);
             const sAppType =
