@@ -548,10 +548,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orora.pungmuprugio;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orora.matgong;
 				PRODUCT_NAME = pungmuprugio;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = pungmuprugio_dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = matgong_dev;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;

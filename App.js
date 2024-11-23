@@ -125,8 +125,8 @@ export default function App() {
 
             if (res.isNeeded) {
               const anurl =
-                'https://play.google.com/store/apps/details?id=com.orora.pungmuprugio';
-              const iosurl = 'https://apps.apple.com/us/app/id6736399602';
+                'https://play.google.com/store/apps/details?id=com.orora.matgong';
+              const iosurl = 'https://apps.apple.com/us/app/id6738602841';
               const gourl = Platform.OS === 'android' ? anurl : iosurl;
               Alert.alert(
                 '앱이 최신버전이 아닙니다.',
