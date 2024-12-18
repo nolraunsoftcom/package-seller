@@ -16,8 +16,8 @@ import Geolocation from '@react-native-community/geolocation';
 import {displayNotification} from './src/utils/displayNotification';
 import notifee, {EventType} from '@notifee/react-native';
 
-const baseUrl = 'https://witdeal-002.members.markets';
-const andoridId = 'com.orora.sinsungapt';
+const baseUrl = 'https://witdeal-seller.members.markets';
+const andoridId = 'com.orora.seller';
 const iosId = 'id6738602841';
 
 export default function App() {
@@ -110,7 +110,6 @@ export default function App() {
         .then(async token => {
           console.log(token);
           VersionCheck.needUpdate().then(async res => {
-            console.log('res', res.isNeeded);
             const sAppType =
               Platform.OS +
               '_currentVersion:' +

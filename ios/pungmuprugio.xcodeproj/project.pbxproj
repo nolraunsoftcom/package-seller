@@ -16,7 +16,7 @@
 		6424EEF32CAADEA000106BA5 /* noti_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = 6424EEF22CAADEA000106BA5 /* noti_sound.wav */; };
 		81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */; };
 		863CC18AF12FFFEDB82338F2 /* libPods-pungmuprugio.a in Frameworks */ = {isa = PBXBuildFile; fileRef = EF2EA5E03D459948886B756A /* libPods-pungmuprugio.a */; };
-		C8AB77842D128D6B003AD657 /* splash.jpg in Resources */ = {isa = PBXBuildFile; fileRef = C8AB77832D128D6B003AD657 /* splash.jpg */; };
+		C805F65A2D12AAD700D76723 /* splash.png in Resources */ = {isa = PBXBuildFile; fileRef = C805F6592D12AAD700D76723 /* splash.png */; };
 		C8AB77882D1294D5003AD657 /* noti_sound.wav in Resources */ = {isa = PBXBuildFile; fileRef = C8AB77872D1294D5003AD657 /* noti_sound.wav */; };
 		DF84875D65C5D38CA56E9BE5 /* libPods-pungmuprugio-pungmuprugioTests.a in Frameworks */ = {isa = PBXBuildFile; fileRef = FCEDB456E3150F24FE007937 /* libPods-pungmuprugio-pungmuprugioTests.a */; };
 /* End PBXBuildFile section */
@@ -51,7 +51,7 @@
 		6424EEF22CAADEA000106BA5 /* noti_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = noti_sound.wav; path = ../assets/noti_sound.wav; sourceTree = "<group>"; };
 		81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; name = LaunchScreen.storyboard; path = pungmuprugio/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		89C6BE57DB24E9ADA2F236DE /* Pods-pungmuprugio-pungmuprugioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pungmuprugio-pungmuprugioTests.release.xcconfig"; path = "Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests.release.xcconfig"; sourceTree = "<group>"; };
-		C8AB77832D128D6B003AD657 /* splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = splash.jpg; path = ../files/splash.jpg; sourceTree = "<group>"; };
+		C805F6592D12AAD700D76723 /* splash.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; name = splash.png; path = ../files/splash.png; sourceTree = "<group>"; };
 		C8AB77872D1294D5003AD657 /* noti_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = noti_sound.wav; path = ../assets/noti_sound.wav; sourceTree = "<group>"; };
 		C8D867082D12990F00D0961B /* pungmuprugioRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = pungmuprugioRelease.entitlements; path = pungmuprugio/pungmuprugioRelease.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
@@ -106,8 +106,8 @@
 				13B07FAF1A68108700A75B9A /* AppDelegate.h */,
 				13B07FB01A68108700A75B9A /* AppDelegate.mm */,
 				6423AC652CAD7BA600627887 /* GoogleService-Info.plist */,
+				C805F6592D12AAD700D76723 /* splash.png */,
 				13B07FB51A68108700A75B9A /* Images.xcassets */,
-				C8AB77832D128D6B003AD657 /* splash.jpg */,
 				13B07FB61A68108700A75B9A /* Info.plist */,
 				81AB9BB72411601600AC10FF /* LaunchScreen.storyboard */,
 				13B07FB71A68108700A75B9A /* main.m */,
@@ -272,8 +272,8 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				C8AB77842D128D6B003AD657 /* splash.jpg in Resources */,
 				81AB9BB82411601600AC10FF /* LaunchScreen.storyboard in Resources */,
+				C805F65A2D12AAD700D76723 /* splash.png in Resources */,
 				13B07FBF1A68108700A75B9A /* Images.xcassets in Resources */,
 				6424EEF32CAADEA000106BA5 /* noti_sound.wav in Resources */,
 				5C19EC292BB3EEF300D3A3C7 /* PrivacyInfo.xcprivacy in Resources */,
@@ -537,12 +537,12 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C3N8GKX588;
 				ENABLE_BITCODE = NO;
 				INFOPLIST_FILE = pungmuprugio/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "윗딜 영통신성";
+				INFOPLIST_KEY_CFBundleDisplayName = "윗딜 셀러";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -554,10 +554,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orora.sinsungapt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orora.seller;
 				PRODUCT_NAME = pungmuprugio;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = sinsungapt_dev;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = seller_dev;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
@@ -578,11 +578,11 @@
 				CODE_SIGN_ENTITLEMENTS = pungmuprugio/pungmuprugioRelease.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 3;
+				CURRENT_PROJECT_VERSION = 2;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C3N8GKX588;
 				INFOPLIST_FILE = pungmuprugio/Info.plist;
-				INFOPLIST_KEY_CFBundleDisplayName = "윗딜 영통신성";
+				INFOPLIST_KEY_CFBundleDisplayName = "윗딜 셀러";
 				INFOPLIST_KEY_LSApplicationCategoryType = "public.app-category.lifestyle";
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
@@ -594,10 +594,10 @@
 					"-ObjC",
 					"-lc++",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.orora.sinsungapt;
+				PRODUCT_BUNDLE_IDENTIFIER = com.orora.seller;
 				PRODUCT_NAME = pungmuprugio;
 				PROVISIONING_PROFILE_SPECIFIER = "";
-				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = sinsungapt_prod;
+				"PROVISIONING_PROFILE_SPECIFIER[sdk=iphoneos*]" = prod_seller;
 				SUPPORTED_PLATFORMS = "iphoneos iphonesimulator";
 				SUPPORTS_MACCATALYST = NO;
 				SUPPORTS_MAC_DESIGNED_FOR_IPHONE_IPAD = NO;
