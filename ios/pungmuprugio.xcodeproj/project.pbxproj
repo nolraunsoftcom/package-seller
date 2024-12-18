@@ -53,6 +53,7 @@
 		89C6BE57DB24E9ADA2F236DE /* Pods-pungmuprugio-pungmuprugioTests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-pungmuprugio-pungmuprugioTests.release.xcconfig"; path = "Target Support Files/Pods-pungmuprugio-pungmuprugioTests/Pods-pungmuprugio-pungmuprugioTests.release.xcconfig"; sourceTree = "<group>"; };
 		C8AB77832D128D6B003AD657 /* splash.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; name = splash.jpg; path = ../files/splash.jpg; sourceTree = "<group>"; };
 		C8AB77872D1294D5003AD657 /* noti_sound.wav */ = {isa = PBXFileReference; lastKnownFileType = audio.wav; name = noti_sound.wav; path = ../assets/noti_sound.wav; sourceTree = "<group>"; };
+		C8D867082D12990F00D0961B /* pungmuprugioRelease.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; name = pungmuprugioRelease.entitlements; path = pungmuprugio/pungmuprugioRelease.entitlements; sourceTree = "<group>"; };
 		ED297162215061F000B7C4FE /* JavaScriptCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = JavaScriptCore.framework; path = System/Library/Frameworks/JavaScriptCore.framework; sourceTree = SDKROOT; };
 		EF2EA5E03D459948886B756A /* libPods-pungmuprugio.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pungmuprugio.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 		FCEDB456E3150F24FE007937 /* libPods-pungmuprugio-pungmuprugioTests.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-pungmuprugio-pungmuprugioTests.a"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -98,6 +99,7 @@
 		13B07FAE1A68108700A75B9A /* pungmuprugio */ = {
 			isa = PBXGroup;
 			children = (
+				C8D867082D12990F00D0961B /* pungmuprugioRelease.entitlements */,
 				6423AC672CAD7F8500627887 /* pungmuprugioDebug.entitlements */,
 				5C1506622B4FE5D30065A9C2 /* pungmuprugio.entitlements */,
 				C8AB77872D1294D5003AD657 /* noti_sound.wav */,
@@ -535,7 +537,7 @@
 				CODE_SIGN_IDENTITY = "Apple Development";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C3N8GKX588;
 				ENABLE_BITCODE = NO;
@@ -573,10 +575,10 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CLANG_ENABLE_MODULES = YES;
-				CODE_SIGN_ENTITLEMENTS = "";
+				CODE_SIGN_ENTITLEMENTS = pungmuprugio/pungmuprugioRelease.entitlements;
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Distribution";
 				CODE_SIGN_STYLE = Manual;
-				CURRENT_PROJECT_VERSION = 2;
+				CURRENT_PROJECT_VERSION = 3;
 				DEVELOPMENT_TEAM = "";
 				"DEVELOPMENT_TEAM[sdk=iphoneos*]" = C3N8GKX588;
 				INFOPLIST_FILE = pungmuprugio/Info.plist;
