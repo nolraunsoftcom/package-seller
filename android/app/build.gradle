@@ -74,9 +74,9 @@ android {
 
     compileSdkVersion rootProject.ext.compileSdkVersion
 
-    namespace "com.orora.matgong"
+    namespace "com.orora.sinsungapt"
     defaultConfig {
-        applicationId "com.orora.matgong"
+        applicationId "com.orora.sinsungapt"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 1

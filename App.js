@@ -16,7 +16,10 @@ import Geolocation from '@react-native-community/geolocation';
 import {displayNotification} from './src/utils/displayNotification';
 import notifee, {EventType} from '@notifee/react-native';
 
-const baseUrl = 'https://tastymarket.members.markets';
+const baseUrl = 'https://witdeal-002.members.markets';
+const andoridId = 'com.orora.sinsungapt';
+const iosId = 'id6738602841';
+
 export default function App() {
   const myWebWiew = useRef();
   const [sourceUrl, setsourceUrl] = useState(baseUrl);
@@ -125,9 +128,11 @@ export default function App() {
 
             if (res.isNeeded) {
               const anurl =
-                'https://play.google.com/store/apps/details?id=com.orora.matgong';
-              const iosurl = 'https://apps.apple.com/us/app/id6738602841';
+                'https://play.google.com/store/apps/details?id=' + andoridId;
+              const iosurl = 'https://apps.apple.com/us/app/' + iosId;
+
               const gourl = Platform.OS === 'android' ? anurl : iosurl;
+
               Alert.alert(
                 '앱이 최신버전이 아닙니다.',
                 '앱을 최신버전으로 업데이트 하시겠습니까?',

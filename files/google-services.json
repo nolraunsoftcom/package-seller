@@ -1,21 +1,21 @@
 {
   "project_info": {
-    "project_number": "459639509634",
-    "project_id": "matgong-d881c",
-    "storage_bucket": "matgong-d881c.firebasestorage.app"
+    "project_number": "298149965153",
+    "project_id": "sinsungapt-b5d73",
+    "storage_bucket": "sinsungapt-b5d73.firebasestorage.app"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:459639509634:android:451475b66d6d333438da9b",
+        "mobilesdk_app_id": "1:298149965153:android:c3b3b7cdf17a7ea62a2920",
         "android_client_info": {
-          "package_name": "com.orora.matgong"
+          "package_name": "com.orora.sinsungapt"
         }
       },
       "oauth_client": [],
       "api_key": [
         {
-          "current_key": "AIzaSyBZf3yUklm9FSNPW4H-bZv8wRep2r-H67U"
+          "current_key": "AIzaSyBDxuPPuwhWM4VWfDovj_wA8vPzuMWOOFM"
         }
       ],
       "services": {
