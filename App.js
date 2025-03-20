@@ -22,6 +22,7 @@ const iosId = 'id6739557730';
 
 export default function App() {
   const myWebWiew = useRef();
+  const myWebWiew2 = useRef();
   const [sourceUrl, setsourceUrl] = useState(baseUrl);
   const [pays, setpays] = useState([
     'supertoss://',
@@ -62,6 +63,7 @@ export default function App() {
   ]);
 
   const onShouldStartLoadWithRequest = event => {
+    console.log(event.url);
     if (
       event.url.startsWith('http://') ||
       event.url.startsWith('https://') ||
@@ -100,7 +102,21 @@ export default function App() {
     // 객체를 JSON 문자열로 변환하여 출력
     try {
       const parsedObject = JSON.parse(event.nativeEvent.data);
+      try {
+        if (
+          typeof parsedObject === 'object' &&
+          !Array.isArray(parsedObject) &&
+          parsedObject.key === 'LINK' &&
+          parsedObject.value
+        ) {
+          const newsourceUrl = parsedObject.value;
 
+          Linking.openURL(newsourceUrl);
+          return;
+        }
+      } catch (e) {
+        console.Console(e);
+      }
       const MemberId = parsedObject[0];
       const local_info = parsedObject[1];
       const local_info_confirm = parsedObject[2];
@@ -108,7 +124,6 @@ export default function App() {
       messaging()
         .getToken()
         .then(async token => {
-          console.log(token);
           VersionCheck.needUpdate().then(async res => {
             const sAppType =
               Platform.OS +
@@ -179,9 +194,7 @@ export default function App() {
   useEffect(() => {
     messaging()
       .getToken()
-      .then(async token => {
-        console.log('token', token);
-      })
+      .then(async token => {})
       .catch(e => {
         console.log(e);
       });
@@ -297,6 +310,8 @@ export default function App() {
         mediaPlaybackRequiresUserAction={false}
         allowsInlineMediaPlayback={true}
         injectedJavaScript={``}
+        textZoom={100}
+        contentMode={'mobile'}
         androidHardwareAccelerationDisabled={true}
         onShouldStartLoadWithRequest={event => {
           return onShouldStartLoadWithRequest(event);
@@ -306,7 +321,6 @@ export default function App() {
           messaging()
             .getToken()
             .then(async token => {
-              console.log('token', token);
               myWebWiew.current.injectJavaScript(`
           localStorage.setItem('pushid', '${token}');
           window.isWebview = true;
