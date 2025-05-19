@@ -79,8 +79,8 @@ android {
         applicationId "com.orora.seller"
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
-        versionCode 101
-        versionName "1.4.0"
+        versionCode 200
+        versionName "1.5.0"
     }
     signingConfigs {
         debug {

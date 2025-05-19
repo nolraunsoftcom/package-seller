@@ -15,14 +15,14 @@ import VersionCheck from 'react-native-version-check';
 import Geolocation from '@react-native-community/geolocation';
 import {displayNotification} from './src/utils/displayNotification';
 import notifee, {EventType} from '@notifee/react-native';
+import Share from 'react-native-share';
+import RefreshController from './src/refreshController';
 
 const baseUrl = 'https://witdeal-seller.members.markets';
 const andoridId = 'com.orora.seller';
 const iosId = 'id6739557730';
 
-export default function App() {
-  const myWebWiew = useRef();
-  const myWebWiew2 = useRef();
+const Webview = ({myWebWiew, onScroll = () => {}}) => {
   const [sourceUrl, setsourceUrl] = useState(baseUrl);
   const [pays, setpays] = useState([
     'supertoss://',
@@ -63,7 +63,6 @@ export default function App() {
   ]);
 
   const onShouldStartLoadWithRequest = event => {
-    console.log(event.url);
     if (
       event.url.startsWith('http://') ||
       event.url.startsWith('https://') ||
@@ -102,6 +101,7 @@ export default function App() {
     // 객체를 JSON 문자열로 변환하여 출력
     try {
       const parsedObject = JSON.parse(event.nativeEvent.data);
+
       try {
         if (
           typeof parsedObject === 'object' &&
@@ -123,9 +123,19 @@ export default function App() {
           Linking.openSettings();
           return;
         }
+
+        if (
+          typeof parsedObject === 'object' &&
+          !Array.isArray(parsedObject) &&
+          parsedObject.key === 'SHARE'
+        ) {
+          await Share.open(parsedObject?.value);
+          return;
+        }
       } catch (e) {
         console.Console(e);
       }
+
       const MemberId = parsedObject[0];
       const local_info = parsedObject[1];
       const local_info_confirm = parsedObject[2];
@@ -133,7 +143,9 @@ export default function App() {
       messaging()
         .getToken()
         .then(async token => {
+          console.log(token);
           VersionCheck.needUpdate().then(async res => {
+            console.log('res', res.isNeeded);
             const sAppType =
               Platform.OS +
               '_currentVersion:' +
@@ -152,7 +164,7 @@ export default function App() {
             if (res.isNeeded) {
               const anurl =
                 'https://play.google.com/store/apps/details?id=' + andoridId;
-              const iosurl = 'https://apps.apple.com/us/app/' + iosId;
+              const iosurl = 'https://apps.apple.com/us/app/id' + iosId;
 
               const gourl = Platform.OS === 'android' ? anurl : iosurl;
 
@@ -203,7 +215,9 @@ export default function App() {
   useEffect(() => {
     messaging()
       .getToken()
-      .then(async token => {})
+      .then(async token => {
+        console.log('token', token);
+      })
       .catch(e => {
         console.log(e);
       });
@@ -310,6 +324,7 @@ export default function App() {
     <SafeAreaView style={{flex: 1}}>
       <WebView
         javaScriptEnabled={true}
+        onScroll={onScroll}
         style={{flex: 1}}
         ref={myWebWiew}
         originWhitelist={['*']}
@@ -317,10 +332,11 @@ export default function App() {
         sharedCookiesEnabled={true}
         thirdPartyCookiesEnabled={true}
         mediaPlaybackRequiresUserAction={false}
+        textZoom={92}
+        contentMode="mobile"
         allowsInlineMediaPlayback={true}
         injectedJavaScript={``}
-        textZoom={92}
-        contentMode={'mobile'}
+        pullToRefreshEnabled={true}
         androidHardwareAccelerationDisabled={true}
         onShouldStartLoadWithRequest={event => {
           return onShouldStartLoadWithRequest(event);
@@ -352,6 +368,14 @@ export default function App() {
           myWebWiew.current?.reload();
         }}
       />
+      {/* <Button
+        title="test"
+        onPress={() => {
+          myWebWiew.current.injectJavaScript(`
+          window.ReactNativeWebView.postMessage(JSON.stringify({key: 'SHARE', value: {url: 'https://www.google.com'}}));
+        `);
+        }}
+      /> */}
       <StatusBar
         animated={true}
         backgroundColor="white"
@@ -360,5 +384,16 @@ export default function App() {
         barStyle="dark-content"
       />
     </SafeAreaView>
+  );
+};
+
+export default function App() {
+  const myWebWiew = useRef();
+  return Platform.OS === 'ios' ? (
+    <Webview myWebWiew={myWebWiew} />
+  ) : (
+    <RefreshController webviewRef={myWebWiew}>
+      <Webview myWebWiew={myWebWiew} />
+    </RefreshController>
   );
 }
